@@ -8,20 +8,21 @@ module.exports = {
     files: [{
       expand: true,
       dot: true,
-      cwd: '<%= folders.app %>',
-      dest: '<%= folders.dist %>',
+      cwd: '<%- folders.app %>',
+      dest: '<%- folders.dist %>',
       src: [
         '*.{ico,txt}',
         '.htaccess',
         'images/{,*/}*.{jpg,jpeg,png,webp,gif,svg}',
-        'styles/fonts/*'
-      ]
-    }, {
+        'fonts/**'
+      ]},
+    {
       expand: true,
-      cwd: '<%= folders.tmp %>',
-      dest: '<%= folders.dist %>',
+      cwd: '<%- folders.tmp %>',
+      dest: '<%- folders.dist %>',
       src: [
-        '**/*.css'
+        '**/*.css',
+        '**/*.map'
       ]
     }]
   }

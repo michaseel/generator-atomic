@@ -4,8 +4,8 @@
  */
 
 module.exports = {
-  html: '<%= folders.tmp %>/index.html',
+  html: '<%- folders.tmp %>/index.html',
   options: {
-    dest: '<%= folders.dist %>'
+    dest: '<%- folders.dist %>'
   }
 };

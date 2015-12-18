@@ -1,6 +1,11 @@
 sudo: false
 language: node_js
 node_js:
-  - 'iojs'
   - '0.12'
-  - '0.10'
+  - '4.2'
+  - '5.0'
+script: npm test
+after_success: npm install -g grunt-cli yo bower && npm link && mkdir testrun && cd testrun &&  yo atomic testProk test TestRunner less true true true && grunt build
+email:
+    on_success: never # default: change
+    on_failure: change # default: always

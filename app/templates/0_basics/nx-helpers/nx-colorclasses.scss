@@ -1,0 +1,168 @@
+
+/* @start: Contextual color helper classes
+The following classes are already included in Bootstrap3:
+
+Contextual backgrounds:
+.bg-primary
+.bg-success
+.bg-info
+.bg-warning
+.bg-danger
+
+Contextual text colors:
+.text-muted
+.text-primary
+.text-success
+.text-info
+.text-warning
+.text-danger
+*/
+
+
+/* monotone background colors */
+.bg-white {
+  background-color: #fff;
+}
+.bg-black {
+  background-color: #000;
+}
+
+
+.bg-gray-100 {
+  background-color: $gray-100;
+}
+
+.bg-gray-300 {
+  background-color: $gray-300;
+}
+
+.bg-gray-500, .bg-gray {
+  background-color: $gray-500;
+}
+
+.bg-gray-700 {
+  background-color: $gray-700;
+}
+
+.bg-gray-900 {
+  background-color: $gray-900;
+}
+
+
+/* primary background colors */
+.bg-primary-100 {
+  background-color: $brand-primary-100;
+}
+
+.bg-primary-300 {
+  background-color: $brand-primary-300;
+}
+
+.bg-primary-500, .bg-primary {
+  background-color: $brand-primary-500;
+}
+
+.bg-primary-700 {
+  background-color: $brand-primary-700;
+}
+
+.bg-primary-900 {
+  background-color: $brand-primary-900;
+}
+
+
+/* secondary background colors */
+.bg-secondary-100 {
+  background-color: $brand-secondary-100;
+}
+
+.bg-secondary-300 {
+  background-color: $brand-secondary-300;
+}
+
+.bg-secondary-500, .bg-secondary {
+  background-color: $brand-secondary-500;
+}
+
+.bg-secondary-700 {
+  background-color: $brand-secondary-700;
+}
+
+.bg-secondary-900 {
+  background-color: $brand-secondary-900;
+}
+
+
+
+/* monotone text colors */
+
+.text-white {
+  color: white;
+  &:hover { color: white;}
+}
+
+.text-black {
+  color: #000;
+  &:hover { color: #000;}
+}
+
+.text-gray-100 {
+  color: $gray-100;
+}
+
+.text-gray-300 {
+  color: $gray-300;
+}
+
+.text-gray-500, .text-gray {
+  color: $gray-500;
+}
+
+.text-gray-700 {
+  color: $gray-700;
+}
+
+.text-gray-900 {
+  color: $gray-900;
+}
+
+
+/* primary text colors */
+.text-primary-300 {
+  color: $brand-primary-300;
+  &:hover { color: $brand-primary-300;}
+}
+.text-primary-500, .text-primary {
+  color: $brand-primary;
+  &:hover { color: $brand-primary;}
+}
+.text-primary-700 {
+  color: $brand-primary-700;
+  &:hover { color: $brand-primary-700;}
+}
+
+/* secondary text colors */
+.text-secondary-300 {
+  color: $brand-secondary-300;
+  &:hover { color: $brand-secondary-300;}
+}
+.text-secondary-500, .text-secondary {
+  color: $brand-secondary;
+  &:hover { color: $brand-secondary;}
+}
+.text-secondary-700 {
+  color: $brand-secondary-700;
+  &:hover { color: $brand-secondary-700;}
+}
+
+
+// demo helper
+.color-box {
+  display: inline-block;
+  line-height: 10rem;
+  width: 13rem;
+  height: 10rem;
+  text-align: center;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}

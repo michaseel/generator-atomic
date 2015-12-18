@@ -1,1 +1,1 @@
-var <%= namespace %> = <%= namespace %> || {};
+const <%= namespace %> = <%= namespace %> || {};

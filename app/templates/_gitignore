@@ -40,3 +40,6 @@ dist
 .sass-cache
 .DS_Store
 .ftpauth
+report
+gl.config.js
+gl.js

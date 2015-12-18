@@ -1,5 +1,5 @@
 /**
- * grunt-contirb-jade options
+ * grunt-contrib-jade options
  * @type {Object}
  */
 
@@ -21,11 +21,19 @@ module.exports = function (grunt, data) {
           path += '../';
         }
 
+        yaml = {};
+        grunt.file.expand('app/**/*.yaml').forEach(function(path) {
+          var _namespace = path.substr(path.lastIndexOf('/') + 1);
+          _namespace = _namespace.replace('.yaml', '');
+
+          yaml[_namespace] = grunt.file.readYAML(path);
+        });
+
         return {
           page: page,
           path: path,
           level: level,
-          lang:  data.lang,
+          yaml:  yaml,
           language: data.language,
           timestamp: data.timestamp
         };
@@ -34,9 +42,9 @@ module.exports = function (grunt, data) {
     html: {
       expand: true,
       //flatten: true,
-      //cwd: '<%= folders.app %>/jade',
-      src: ['<%= folders.app %>/{,*/,**/}*.jade', '!**/_*'],
-      dest: '<%= folders.tmp %>',
+      //cwd: '<%- folders.app %>/jade',
+      src: ['<%- folders.app %>/{,*/,**/}*.jade', '!**/_*'],
+      dest: '<%- folders.tmp %>',
       ext: '.html',
       rename: function(dest, src) {
         return src.replace('app/', '.tmp/');

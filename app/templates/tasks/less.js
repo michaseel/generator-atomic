@@ -5,35 +5,20 @@
 
 module.exports = {
   options: {
-    paths: ['<%= folders.app %>/'],
+    cleancss: true,
+    paths: ['<%- folders.app %>/'],
+    sourceMap: true,
+    sourceMapURL: 'main.css.map',
+    //sourceMapFilename: '<%- folders.tmp %>/0_basics/main.css.map',
+    outputSourceFiles: true
   },
-  dist: {
-    options: {
-      compress: true,
-      cleancss: true,
-      sourceMap: true,
-      sourceMapURL: 'main.less.map',
-      sourceMapFilename: '<%= folders.dist %>/0_basics/main.less.map',
-      outputSourceFiles: true
-    },
+  default: {
     files: [{
       expand: true,
-      cwd: '<%= folders.app %>/0_basics',
-      src: ['*.less', '!**/_*', '!variables.less'],
-      dest: '<%= folders.tmp %>/0_basics',
+      cwd: '<%- folders.app %>/0_basics',
+      src: ['*.<%= cssPreprocessorExtension %>', '!**/_*', '!variables.<%= cssPreprocessorExtension %>'],
+      dest: '<%- folders.tmp %>/0_basics',
       ext: '.css'
-    }],
-  },
-  server: {
-    options: {
-      dumpLineNumbers: 'all'
-    },
-    files: [{
-      expand: true,
-      cwd: '<%= folders.app %>/0_basics',
-      src: ['*.less', '!**/_*', '!variables.less'],
-      dest: '<%= folders.tmp %>/0_basics',
-      ext: '.css'
-    }],
+    }]
   }
 };

@@ -20,17 +20,13 @@ module.exports = {
       exclude: [
         'bower_components/html5shiv/',
         'bower_components/consolelog/',
-        'bower_components/modernizr/',
+        'bower_components/modernizr/'
       ],
       overrides: {
       }
     },
     src: [
-      '<%= folders.app %>/0_basics/_default.jade'
+      '<%- folders.app %>/0_basics/_default.jade'
     ]
-  },
-  styles: {
-    src: ['<%= folders.app %>/styles/**/*.less'],
-    ignorePath: /client/g,
   }
 };

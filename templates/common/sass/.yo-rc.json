@@ -1,0 +1,52 @@
+{
+  "generator-atomic": {
+    "projectName": "test prok",
+    "appname": "test-prok",
+    "namespace": "mse",
+    "cssPreprocessor": "sass",
+    "cssPreprocessorExtension": "scss",
+    "galen": true,
+    "karma": true,
+    "camelized": true,
+    "atom": {
+      "moduletype": "atom",
+      "modulefolder": "1_atoms",
+      "markupmixins": true,
+      "content": true,
+      "scripts": false,
+      "styles": true
+    },
+    "molecule": {
+      "moduletype": "molecule",
+      "modulefolder": "2_molecules",
+      "markupmixins": true,
+      "content": true,
+      "scripts": true,
+      "styles": true
+    },
+    "organism": {
+      "moduletype": "organism",
+      "modulefolder": "3_organisms",
+      "markupmixins": true,
+      "content": true,
+      "scripts": true,
+      "styles": true
+    },
+    "template": {
+      "moduletype": "template",
+      "modulefolder": "4_templates",
+      "markupmixins": false,
+      "content": true,
+      "scripts": false,
+      "styles": false
+    },
+    "page": {
+      "moduletype": "page",
+      "modulefolder": "5_pages",
+      "markupmixins": false,
+      "content": true,
+      "scripts": false,
+      "styles": false
+    }
+  }
+}

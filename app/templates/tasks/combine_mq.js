@@ -9,8 +9,8 @@ module.exports = {
   },
   dist: {
     expand: true,
-    cwd: '<%= folders.tmp %>/concat/0_basics/',
+    cwd: '<%- folders.tmp %>/concat/0_basics/',
     src: '*.css',
-    dest: '<%= folders.tmp %>/concat/0_basics/'
+    dest: '<%- folders.tmp %>/concat/0_basics/'
   }
 };

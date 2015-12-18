@@ -7,9 +7,9 @@ module.exports = {
   dist: {
     files: [{
       expand: true,
-      cwd: '<%= folders.tmp %>',
+      cwd: '<%- folders.tmp %>',
       src: '{,*/,**/}*.html',
-      dest: '<%= folders.dist %>'
+      dest: '<%- folders.dist %>'
     }]
   }
 };

@@ -3,15 +3,29 @@
 doctype html
 html
   head
-    title <%= projectName %>
+    title=yaml.basics.meta.title
     meta(charset='UTF-8')
-    meta(content='', name='description')
-    meta(content='<%= author %>', name='author')
+    meta(content=yaml.basics.meta.description, name='description')
+    meta(content=yaml.basics.meta.keywords, name='keywords')
     meta(content='3 days', name='revisit-after')
-    meta(name='viewport', content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no")
+    meta(http-equiv="X-UA-Compatible" content="IE=edge")
+    meta(name='viewport', content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1")
+    block meta
+
     link(type="text/plain" rel="author" href="#{path}humans.txt")
 
+    block head
+
     link(href='#{path}0_basics/main.css', rel='stylesheet')
+    if level == 0
+      // build:css(bower_components) 0_basics/vendor.css
+    else if level == 1
+      // build:css(bower_components) ../0_basics/vendor.css
+    else
+      // build:css(bower_components) ../../0_basics/vendor.css
+    // bower:css
+    // endbower
+    // endbuild
 
     noscript
       link(href='#{path}0_basics/nojs.css', rel='stylesheet')
@@ -23,11 +37,11 @@ html
     block content
     +footer
     if level == 0
-      // build:js({.,.tmp}) 0_basics/controller.js
+      // build:js({.,.tmp,bower_components}) 0_basics/controller.js
     else if level == 1
-      // build:js({.,.tmp}) ../0_basics/controller.js
+      // build:js({.,.tmp,bower_components}) ../0_basics/controller.js
     else
-      // build:js({.,.tmp}) ../../0_basics/controller.js
+      // build:js({.,.tmp,bower_components}) ../../0_basics/controller.js
 
     // bower:js
     script(src='/jquery/dist/jquery.js')

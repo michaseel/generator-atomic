@@ -1,0 +1,107 @@
+// $start: Custom Checkbox / Radio Styles by mseel
+:root {
+  .styled-radio,
+  .styled-checkbox {
+    position: relative;
+
+    label {
+      margin-right: 15px;
+      margin-bottom: 8px;
+    }
+
+    label,
+    input + span,
+    input + span::before {
+        display: inline-block;
+        vertical-align: top;
+    }
+
+    label * {
+        cursor: pointer;
+    }
+
+    input {
+        opacity: 0;
+        position: absolute;
+    }
+
+    label *,
+    input + span {
+        //font: normal 14px verdana;
+        line-height: 27px;
+        font-weight: normal;
+        color: black;
+    }
+
+    label:hover span::before {
+      box-shadow: 0;
+    }
+
+    label:active span::before {
+        box-shadow: 0;
+    }
+
+    label:hover span {
+      color: $gray-darker;
+    }
+    input + span::before {
+        content: "";
+        width: 25px;
+        height: 25px;
+        border: solid 1px $gray-light;
+        line-height: 14px;
+        text-align: center;
+        background: #fff;
+        padding-top: 1px;
+    }
+
+    input:checked + span::before {
+        color: $gray-darker;
+    }
+    input:disabled + span {
+        cursor: default;
+        opacity: .4;
+    }
+  }
+
+
+  .styled-checkbox {
+
+      input[type="checkbox"] {
+          + span::before {
+            margin: 2px 8px 0 0;
+            border-radius: 2px;
+          }
+      }
+      input[type="checkbox"]:checked {
+          + span::before {
+              content: "\2714";
+              font-size: 22px;
+              color: $brand-primary;
+
+            padding-top: 5px;
+          }
+      }
+  }
+  .styled-radio {
+
+      input:focus + span:before {
+        //(box-shadow: $brand-primary-light 0 0 2px;
+      }
+      input[type="radio"] + span::before {
+        margin: 0 8px 0 0;
+        border-radius: 100%;
+      }
+      input[type="radio"]:checked {
+          + span::before {
+              content: "\2022";
+              //font-family: "Eurostyle-Reg", Helvetica, Arial, sans-serif;
+              font-size: 50px;
+              color: $brand-primary;
+          }
+      }
+  }
+}
+
+
+/* $end: Custom Radio / Checkbox styles */
